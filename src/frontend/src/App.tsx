@@ -551,28 +551,33 @@ function Programs() {
 // ─── Gallery ──────────────────────────────────────────────────────────────────
 const galleryImages = [
   {
-    src: "/gallery/image1.jpeg",
-    alt: "Classroom teaching",
+    src: "gallery/image3.jpeg",
+    alt: "Classroom teaching on digital board",
     span: "row-span-2",
   },
   {
-    src: "/gallery/image2.jpeg",
-    alt: "Students studying",
+    src: "gallery/image4.jpeg",
+    alt: "Group of students studying together",
     span: "",
   },
   {
-    src: "/gallery/image3.jpeg",
-    alt: "Mental arithmetic",
+    src: "gallery/image5.jpeg",
+    alt: "Student doing mental arithmetic using an abacus",
     span: "",
   },
   {
-    src: "/gallery/image4.jpeg",
-    alt: "Learning space",
+    src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=700&q=80",
+    alt: "Modern learning space",
     span: "row-span-2",
   },
   {
-    src: "/gallery/image5.jpeg",
+    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80",
     alt: "Focused student",
+    span: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
+    alt: "Students at work",
     span: "",
   },
 ];
@@ -588,7 +593,8 @@ function Gallery() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          className={`text-center mb-14 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <div className="w-8 h-1 bg-accent rounded-full mx-auto mb-4" />
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-foreground">
@@ -600,7 +606,8 @@ function Gallery() {
         </div>
         {/* Masonry grid */}
         <div
-          className={`grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
           style={{ transitionDelay: "150ms" }}
         >
           {galleryImages.map((img, i) => (
