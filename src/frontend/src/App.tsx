@@ -594,20 +594,35 @@ function Gallery() {
           </p>
         </div>
         {/* Masonry grid */}
-        <div className="columns-2 md:columns-3 gap-4 min-h-[300px]">
-          {galleryImages.map((img, i) => (
-            <div
-              key={img.src}
-              data-ocid={`gallery.item.${i + 1}`}
-              className="inline-block w-full mb-4 overflow-hidden rounded-2xl group cursor-pointer break-inside-avoid relative"
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-          ))}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="flex flex-col gap-4">
+            {galleryImages.filter((_, i) => i % 2 === 0).map((img, i) => (
+              <div
+                key={img.src}
+                className="overflow-hidden rounded-2xl group cursor-pointer relative"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col gap-4">
+            {galleryImages.filter((_, i) => i % 2 === 1).map((img, i) => (
+              <div
+                key={img.src}
+                className="overflow-hidden rounded-2xl group cursor-pointer relative"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
