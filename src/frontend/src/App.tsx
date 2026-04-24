@@ -576,7 +576,7 @@ const galleryImages = [
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
+    src: "gallery/image6.png",
     alt: "Students at work",
     span: "",
   },
