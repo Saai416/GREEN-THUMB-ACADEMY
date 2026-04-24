@@ -39,18 +39,11 @@ function useInView(threshold = 0.15) {
 }
 
 const WA_LINK =
-  "https://wa.me/919710065653?text=Hi%2C%20I%20am%20interested%20in%20Shree%20Tuition%20for%20Mathematics.%20Please%20share%20details.";
+  "https://wa.me/919080583518?text=Hi%2C%20I%20am%20interested%20in%20Green%20Thumb%20Academy.%20Please%20share%20details.";
 
 // ─── Navbar ───────────────────────────────────────────────────────────────────
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -60,10 +53,7 @@ function Navbar() {
   return (
     <nav
       data-ocid="navbar"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-white/95 backdrop-blur-md shadow-subtle border-b border-border"
-        : "bg-transparent"
-        }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-subtle border-b border-border"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -73,23 +63,15 @@ function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2 group"
         >
-          <div
-            className={`p-1.5 rounded-lg transition-smooth ${scrolled ? "bg-primary/10" : "bg-white/15"}`}
-          >
-            <GraduationCap
-              className={`w-5 h-5 ${scrolled ? "text-primary" : "text-white"}`}
-            />
+          <div className="p-1.5 rounded-lg transition-smooth bg-primary/10">
+            <GraduationCap className="w-5 h-5 text-primary" />
           </div>
           <div className="leading-tight">
-            <span
-              className={`font-poppins font-700 text-sm sm:text-base font-bold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}
-            >
-              Shree Tuition
+            <span className="font-poppins font-700 text-sm sm:text-base font-bold tracking-tight text-foreground">
+              GREEN THUMB ACADEMY
             </span>
-            <span
-              className={`hidden sm:block text-xs ${scrolled ? "text-muted-foreground" : "text-white/70"}`}
-            >
-              Mathematics, Chennai
+            <span className="hidden sm:block text-xs text-muted-foreground">
+              Chennai
             </span>
           </div>
         </button>
@@ -107,10 +89,7 @@ function Navbar() {
               key={id}
               data-ocid={`navbar.${id}_link`}
               onClick={() => scrollTo(id)}
-              className={`text-sm font-medium transition-smooth ${scrolled
-                ? "text-foreground hover:text-primary"
-                : "text-white/80 hover:text-white"
-                }`}
+              className="text-sm font-medium transition-smooth text-foreground hover:text-primary"
             >
               {label}
             </button>
@@ -120,15 +99,12 @@ function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="tel:+919710065653"
+            href="tel:09080583518"
             data-ocid="navbar.call_button"
-            className={`flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-smooth ${scrolled
-              ? "text-primary border border-primary/30 hover:bg-primary/5"
-              : "text-white/90 border border-white/30 hover:bg-white/10"
-              }`}
+            className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-smooth text-primary border border-primary/30 hover:bg-primary/5"
           >
             <Phone className="w-3.5 h-3.5" />
-            +91 97100 65653
+            090805 83518
           </a>
           <a
             href={WA_LINK}
@@ -147,7 +123,7 @@ function Navbar() {
           type="button"
           data-ocid="navbar.menu_toggle"
           onClick={() => setOpen(!open)}
-          className={`md:hidden p-2 rounded-lg ${scrolled ? "text-foreground" : "text-white"}`}
+          className="md:hidden p-2 rounded-lg text-foreground"
           aria-label={open ? "Close menu" : "Open menu"}
         >
           {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -173,11 +149,11 @@ function Navbar() {
             </button>
           ))}
           <a
-            href="tel:+919710065653"
+            href="tel:09080583518"
             className="flex items-center gap-2 text-sm font-medium text-primary py-2"
           >
             <Phone className="w-4 h-4" />
-            +91 97100 65653
+            090805 83518
           </a>
           <a
             href={WA_LINK}
@@ -200,13 +176,13 @@ function Hero() {
     <section
       id="hero"
       data-ocid="hero.section"
-      className="relative h-screen min-h-[600px] md:h-screen flex items-end pb-20 md:pb-28 overflow-hidden"
+      className="relative h-screen min-h-[600px] md:h-screen flex items-end pt-24 pb-20 md:pb-28 overflow-hidden"
     >
       {/* Background image */}
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80"
-          alt="Mathematics classroom"
+          alt="Classroom"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -231,25 +207,32 @@ function Hero() {
         {/* Headline */}
         <h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins font-bold text-white leading-tight mb-4 max-w-4xl"
-          style={{ animation: "fade-in-up 0.6s 0.1s ease-out both" }}
         >
           Best Tuition Centre for
           <br />
-          <span className="text-accent">Academic Excellence</span>
+          <span className="text-white">Academic Excellence</span>
         </h1>
 
         {/* Subheading */}
         <p
-          className="text-white/80 text-lg sm:text-xl font-inter mb-8 max-w-xl"
-          style={{ animation: "fade-in-up 0.6s 0.2s ease-out both" }}
+          className="text-white/80 text-lg sm:text-xl font-inter mb-6 max-w-xl"
         >
-          Strong fundamentals. Better results. Confident students.
+          Strong fundamentals. Better results. Confident students.<br />
+          Special focus on Phonics & Hindi learning.
         </p>
+
+        {/* Announcement Badge */}
+        <div
+          className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white font-inter text-sm px-4 py-2 rounded-full mb-8 shadow-elevated"
+          style={{ animation: "fade-in-up 0.6s 0.25s ease-out both" }}
+        >
+          <span className="flex items-center justify-center h-6 px-2.5 rounded-full bg-accent text-accent-foreground font-bold text-[10px] uppercase tracking-wider">New</span>
+          Accounts classes for 10th & 12th students now available.
+        </div>
 
         {/* CTA Buttons */}
         <div
           className="flex flex-col sm:flex-row gap-3"
-          style={{ animation: "fade-in-up 0.6s 0.3s ease-out both" }}
         >
           <a
             href={WA_LINK}
@@ -262,7 +245,7 @@ function Hero() {
             Chat on WhatsApp
           </a>
           <a
-            href="tel:+919710065653"
+            href="tel:09080583518"
             data-ocid="hero.call_button"
             className="flex items-center justify-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 font-semibold font-poppins text-base px-7 py-3.5 rounded-xl transition-smooth"
           >
@@ -332,7 +315,7 @@ function SplitSection() {
           <div className="relative overflow-hidden rounded-3xl rounded-tl-[3rem] shadow-elevated">
             <img
               src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=80"
-              alt="Students studying mathematics"
+              alt="Students studying"
               className="w-full h-[420px] lg:h-[500px] object-cover"
             />
             {/* Accent overlay badge */}
@@ -351,7 +334,7 @@ function SplitSection() {
         >
           <div className="w-12 h-1 bg-accent rounded-full mb-6" />
           <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-foreground mb-5 leading-tight">
-            Focused Mathematics
+            Focused
             <br />
             <span className="text-primary">Coaching</span>
           </h2>
@@ -396,39 +379,104 @@ function SplitSection() {
 const programs = [
   {
     icon: Calculator,
-    title: "Mathematics (6th to 12th Grade)",
+    title: <>All Subjects Tuition</>,
     desc: "State Board, CBSE, and ICSE. From algebra to calculus, we ensure complete concept clarity.",
-    tag: "Board Exams Focus",
+    tag: "Tuition",
     image:
-      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80",
-    imageAlt: "Student studying mathematics with equations on board",
+      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80",
+    imageAlt: "Tuition",
   },
   {
     icon: FlaskConical,
-    title: "Science Subjects",
-    desc: "Physics and Chemistry support. Understanding over memorization for lasting results in both school and competitive exams.",
-    tag: "Physics & Chemistry",
+    title: <>Hindi <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase">Popular</span></>,
+    desc: "Language program focusing on speaking, reading, and writing.",
+    tag: "Language",
     image:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80",
-    imageAlt: "Science lab with students learning",
-  },
-  {
-    icon: Star,
-    title: "Vedic Mathematics",
-    desc: "Learn ancient techniques for ultra-fast calculations. Improves mathematical agility and builds strong numerical confidence.",
-    tag: "Speed Maths",
-    image:
-      "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&q=80",
-    imageAlt: "Vedic mathematics concepts",
+      "https://images.unsplash.com/photo-1657302155485-790b74d0b5d1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAlt: "Hindi",
+
   },
   {
     icon: Target,
-    title: "Abacus (All Levels)",
+    title: <>Karate<span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase">Popular</span></>,
+    desc: "Physical fitness, self defense and discipline.",
+    tag: "Sports",
+    image:
+      "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
+    imageAlt: "Karate",
+  },
+  {
+    icon: FlaskConical,
+    title: <>Phonics <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase">Popular</span></>,
+    desc: "Reading, writing, and spelling foundations.",
+    tag: "Language",
+    image:
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80",
+    imageAlt: "Phonics",
+  },
+  {
+    icon: Target,
+    title: <>Abacus</>,
     desc: "A proven method to enhance brain development, concentration, and mental arithmetic skills for young learners.",
     tag: "Mental Arithmetic",
     image:
       "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?w=600&q=80",
-    imageAlt: "Student using an abacus for calculations",
+    imageAlt: "Abacus",
+  },
+  {
+    icon: Star,
+    title: <>Vedic Maths</>,
+    desc: "Learn ancient techniques for ultra-fast calculations.",
+    tag: "Speed Maths",
+    image:
+      "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&q=80",
+    imageAlt: "Vedic Maths",
+  },
+  {
+    icon: Star,
+    title: <>Yoga</>,
+    desc: "Physical and mental focus for a balanced lifestyle.",
+    tag: "Wellness",
+    image:
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+    imageAlt: "Yoga",
+  },
+
+  {
+    icon: Star,
+    title: <>Drawing</>,
+    desc: "Creative expression and artistic foundations.",
+    tag: "Arts",
+    image:
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
+    imageAlt: "Drawing",
+  },
+  {
+    icon: Star,
+    title: <>Keyboard</>,
+    desc: "Musical foundation and keyboard playing skills.",
+    tag: "Music",
+    image:
+      "https://images.unsplash.com/photo-1552422535-c45813c61732?w=600&q=80",
+    imageAlt: "Keyboard",
+  },
+  {
+    icon: Star,
+    title: <>Guitar</>,
+    desc: "Acoustic guitar lessons for all ages.",
+    tag: "Music",
+    image:
+      "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=600&q=80",
+    imageAlt: "Guitar",
+  },
+  {
+    icon: BookOpen,
+    title: <>Accounts (for 10th & 12th) <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary text-white uppercase">New</span></>,
+    desc: "Focused coaching for board exams and commerce fundamentals.",
+    tag: "Commerce",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
+    imageAlt: "Accounts",
   },
 ];
 
@@ -449,10 +497,10 @@ function Programs() {
           Our Programs
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {programs.map((p, i) => (
           <div
-            key={p.title}
+            key={i}
             data-ocid={`programs.item.${i + 1}`}
             className={`group bg-card border border-border rounded-2xl overflow-hidden shadow-subtle hover:shadow-card-hover hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
             style={{ transitionDelay: `${i * 150 + 100}ms` }}
@@ -503,34 +551,24 @@ function Programs() {
 // ─── Gallery ──────────────────────────────────────────────────────────────────
 const galleryImages = [
   {
-    src: "/gallery/image3.png",
-    alt: "Classroom teaching on digital board",
-    span: "row-span-2",
+    src: "/gallery/image1.jpeg",
+    alt: "Classroom teaching",
   },
   {
-    src: "/gallery/image4.png",
-    alt: "Group of students studying together",
-    span: "",
+    src: "/gallery/image2.jpeg",
+    alt: "Students studying",
   },
   {
-    src: "/gallery/image5.png",
-    alt: "Student doing mental arithmetic using an abacus",
-    span: "",
+    src: "/gallery/image3.jpeg",
+    alt: "Mental arithmetic",
   },
   {
-    src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=700&q=80",
-    alt: "Modern learning space",
-    span: "row-span-2",
+    src: "/gallery/image4.jpeg",
+    alt: "Learning space",
   },
   {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80",
+    src: "/gallery/image5.jpeg",
     alt: "Focused student",
-    span: "",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
-    alt: "Students at work",
-    span: "",
   },
 ];
 
@@ -557,19 +595,19 @@ function Gallery() {
         </div>
         {/* Masonry grid */}
         <div
-          className={`grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`columns-2 md:columns-3 gap-4 space-y-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           style={{ transitionDelay: "150ms" }}
         >
           {galleryImages.map((img, i) => (
             <div
               key={img.src}
               data-ocid={`gallery.item.${i + 1}`}
-              className={`overflow-hidden rounded-2xl group cursor-pointer ${img.span}`}
+              className="overflow-hidden rounded-2xl group cursor-pointer break-inside-avoid relative"
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -666,21 +704,21 @@ function Differentiators() {
 const testimonials = [
   {
     quote:
-      "Good teaching and very dedicated to her work. My son's confidence in maths has improved significantly.",
-    reviewer: "Parent of Class 8 student",
-    initial: "R",
+      "It is the best tuition because it has not only improved my studies but also built my confidence.",
+    reviewer: "Abhinav Kaimal",
+    initial: "A",
   },
   {
     quote:
-      "Strong in subject and uses modern teaching tools. My daughter scored 95 in her board exams this year.",
-    reviewer: "Parent of Class 10 student",
+      "Your teaching style is not only effective but also incredibly nurturing, making learning enjoyable.",
+    reviewer: "subha shiny",
     initial: "S",
   },
   {
     quote:
-      "Highly recommend for discipline and improvement. The structured approach made a huge difference.",
-    reviewer: "Parent of Class 9 student",
-    initial: "M",
+      "Best Teaching and Excellent yoga Class and other Classes Super 👌👍✨",
+    reviewer: "Rekha Magesh",
+    initial: "R",
   },
 ];
 
@@ -823,11 +861,11 @@ function Contact() {
                     Address
                   </p>
                   <p className="text-foreground font-inter text-sm leading-relaxed">
-                    PLOT NO 12, Natco Colony W St,
+                    5, Devaraj Nagar 2nd St,
                     <br />
-                    Swaminathan Nagar, Kottivakkam,
+                    Sai Balaji Nagar, Pallikaranai,
                     <br />
-                    Chennai, Tamil Nadu 600041
+                    Chennai, Tamil Nadu 600100
                   </p>
                 </div>
               </li>
@@ -840,11 +878,11 @@ function Contact() {
                     Phone
                   </p>
                   <a
-                    href="tel:+919710065653"
+                    href="tel:09080583518"
                     data-ocid="contact.call_button"
                     className="text-primary font-inter font-semibold text-sm hover:underline"
                   >
-                    +91 97100 65653
+                    090805 83518
                   </a>
                 </div>
               </li>
@@ -864,7 +902,7 @@ function Contact() {
             </ul>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:+919710065653"
+                href="tel:09080583518"
                 data-ocid="contact.call_cta_button"
                 className="flex items-center justify-center gap-2 border border-primary text-primary font-poppins font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-primary/5 transition-smooth"
               >
@@ -890,8 +928,8 @@ function Contact() {
             style={{ height: "360px" }}
           >
             <iframe
-              title="Shree Tuition Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8!2d80.2437!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKottivakkam%2C+Chennai!5e0!3m2!1sen!2sin!4v1234567890"
+              title="Green Thumb Academy Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8!2d80.2437!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPallikaranai%2C+Chennai!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -915,17 +953,16 @@ function Footer() {
         <div className="flex items-center justify-center gap-2 mb-3">
           <GraduationCap className="w-5 h-5 text-white/70" />
           <span className="text-white font-poppins font-semibold text-base">
-            Shree Tuition for Mathematics
+            Green Thumb Academy
           </span>
         </div>
         <p className="text-white/60 font-inter text-xs mb-2">
-          PLOT NO 12, Natco Colony W St, Swaminathan Nagar, Kottivakkam, Chennai
-          — 600041
+          5, Devaraj Nagar 2nd St, Sai Balaji Nagar, Pallikaranai, Chennai, Tamil Nadu 600100
         </p>
-        <p className="text-white/60 font-inter text-xs mb-5">+91 97100 65653</p>
+        <p className="text-white/60 font-inter text-xs mb-5">090805 83518</p>
         <div className="border-t border-white/10 pt-5">
           <p className="text-white/40 font-inter text-xs">
-            © {year} Shree Tuition. All rights reserved.
+            © {year} Green Thumb Academy. All rights reserved.
           </p>
         </div>
       </div>
