@@ -5435,6 +5435,7 @@ react_production.version = "19.1.5";
   react.exports = react_production;
 }
 var reactExports = react.exports;
+const React$2 = /* @__PURE__ */ getDefaultExportFromCjs(reactExports);
 var QueryClientContext = reactExports.createContext(
   void 0
 );
@@ -6764,7 +6765,7 @@ function mergeLoginOptions(loginOptions, otherLoginOptions) {
   };
 }
 const ONE_HOUR_IN_NANOSECONDS = BigInt(36e11);
-const DEFAULT_IDENTITY_PROVIDER = "https://id.ai";
+const DEFAULT_IDENTITY_PROVIDER = "https://identity.internetcomputer.org/";
 const InternetIdentityReactContext = reactExports.createContext(void 0);
 async function createAuthClient(createOptions) {
   const config = await loadConfig();
@@ -18504,7 +18505,7 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$d = [
+const __iconNode$c = [
   ["path", { d: "M12 7v14", key: "1akyts" }],
   [
     "path",
@@ -18514,14 +18515,14 @@ const __iconNode$d = [
     }
   ]
 ];
-const BookOpen = createLucideIcon("book-open", __iconNode$d);
+const BookOpen = createLucideIcon("book-open", __iconNode$c);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$c = [
+const __iconNode$b = [
   ["rect", { width: "16", height: "20", x: "4", y: "2", rx: "2", key: "1nb95v" }],
   ["line", { x1: "8", x2: "16", y1: "6", y2: "6", key: "x4nwl0" }],
   ["line", { x1: "16", x2: "16", y1: "14", y2: "18", key: "wjye3r" }],
@@ -18533,18 +18534,7 @@ const __iconNode$c = [
   ["path", { d: "M12 18h.01", key: "mhygvu" }],
   ["path", { d: "M8 18h.01", key: "lrp35t" }]
 ];
-const Calculator = createLucideIcon("calculator", __iconNode$c);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$b = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
-];
-const Clock = createLucideIcon("clock", __iconNode$b);
+const Calculator = createLucideIcon("calculator", __iconNode$b);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -18552,17 +18542,10 @@ const Clock = createLucideIcon("clock", __iconNode$b);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$a = [
-  [
-    "path",
-    {
-      d: "M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2",
-      key: "18mbvz"
-    }
-  ],
-  ["path", { d: "M6.453 15h11.094", key: "3shlmq" }],
-  ["path", { d: "M8.5 2h7", key: "csnxdl" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
 ];
-const FlaskConical = createLucideIcon("flask-conical", __iconNode$a);
+const Clock = createLucideIcon("clock", __iconNode$a);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -18573,14 +18556,14 @@ const __iconNode$9 = [
   [
     "path",
     {
-      d: "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z",
-      key: "j76jl0"
+      d: "M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2",
+      key: "18mbvz"
     }
   ],
-  ["path", { d: "M22 10v6", key: "1lu8f3" }],
-  ["path", { d: "M6 12.5V16a6 3 0 0 0 12 0v-3.5", key: "1r8lef" }]
+  ["path", { d: "M6.453 15h11.094", key: "3shlmq" }],
+  ["path", { d: "M8.5 2h7", key: "csnxdl" }]
 ];
-const GraduationCap = createLucideIcon("graduation-cap", __iconNode$9);
+const FlaskConical = createLucideIcon("flask-conical", __iconNode$9);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -18591,13 +18574,14 @@ const __iconNode$8 = [
   [
     "path",
     {
-      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-      key: "1r0f0z"
+      d: "M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z",
+      key: "j76jl0"
     }
   ],
-  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
+  ["path", { d: "M22 10v6", key: "1lu8f3" }],
+  ["path", { d: "M6 12.5V16a6 3 0 0 0 12 0v-3.5", key: "1r8lef" }]
 ];
-const MapPin = createLucideIcon("map-pin", __iconNode$8);
+const GraduationCap = createLucideIcon("graduation-cap", __iconNode$8);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -18605,11 +18589,16 @@ const MapPin = createLucideIcon("map-pin", __iconNode$8);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$7 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
+  [
+    "path",
+    {
+      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+      key: "1r0f0z"
+    }
+  ],
+  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const Menu = createLucideIcon("menu", __iconNode$7);
+const MapPin = createLucideIcon("map-pin", __iconNode$7);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -18617,9 +18606,11 @@ const Menu = createLucideIcon("menu", __iconNode$7);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$6 = [
-  ["path", { d: "M7.9 20A9 9 0 1 0 4 16.1L2 22Z", key: "vv11sd" }]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const MessageCircle = createLucideIcon("message-circle", __iconNode$6);
+const Menu = createLucideIcon("menu", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -18699,6 +18690,120 @@ const __iconNode = [
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ];
 const X = createLucideIcon("x", __iconNode);
+var DefaultContext = {
+  color: void 0,
+  size: void 0,
+  className: void 0,
+  style: void 0,
+  attr: void 0
+};
+var IconContext = React$2.createContext && /* @__PURE__ */ React$2.createContext(DefaultContext);
+var _excluded = ["attr", "size", "title"];
+function _objectWithoutProperties(e, t) {
+  if (null == e) return {};
+  var o, r, i = _objectWithoutPropertiesLoose(e, t);
+  if (Object.getOwnPropertySymbols) {
+    var n = Object.getOwnPropertySymbols(e);
+    for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]);
+  }
+  return i;
+}
+function _objectWithoutPropertiesLoose(r, e) {
+  if (null == r) return {};
+  var t = {};
+  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
+    if (-1 !== e.indexOf(n)) continue;
+    t[n] = r[n];
+  }
+  return t;
+}
+function _extends() {
+  return _extends = Object.assign ? Object.assign.bind() : function(n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, _extends.apply(null, arguments);
+}
+function ownKeys(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function(r2) {
+      return Object.getOwnPropertyDescriptor(e, r2).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys(Object(t), true).forEach(function(r2) {
+      _defineProperty(e, r2, t[r2]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function(r2) {
+      Object.defineProperty(e, r2, Object.getOwnPropertyDescriptor(t, r2));
+    });
+  }
+  return e;
+}
+function _defineProperty(e, r, t) {
+  return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: true, configurable: true, writable: true }) : e[r] = t, e;
+}
+function _toPropertyKey(t) {
+  var i = _toPrimitive(t, "string");
+  return "symbol" == typeof i ? i : i + "";
+}
+function _toPrimitive(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r);
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function Tree2Element(tree) {
+  return tree && tree.map((node, i) => /* @__PURE__ */ React$2.createElement(node.tag, _objectSpread({
+    key: i
+  }, node.attr), Tree2Element(node.child)));
+}
+function GenIcon(data) {
+  return (props) => /* @__PURE__ */ React$2.createElement(IconBase, _extends({
+    attr: _objectSpread({}, data.attr)
+  }, props), Tree2Element(data.child));
+}
+function IconBase(props) {
+  var elem = (conf) => {
+    var {
+      attr,
+      size,
+      title
+    } = props, svgProps = _objectWithoutProperties(props, _excluded);
+    var computedSize = size || conf.size || "1em";
+    var className;
+    if (conf.className) className = conf.className;
+    if (props.className) className = (className ? className + " " : "") + props.className;
+    return /* @__PURE__ */ React$2.createElement("svg", _extends({
+      stroke: "currentColor",
+      fill: "currentColor",
+      strokeWidth: "0"
+    }, conf.attr, attr, svgProps, {
+      className,
+      style: _objectSpread(_objectSpread({
+        color: props.color || conf.color
+      }, conf.style), props.style),
+      height: computedSize,
+      width: computedSize,
+      xmlns: "http://www.w3.org/2000/svg"
+    }), title && /* @__PURE__ */ React$2.createElement("title", null, title), props.children);
+  };
+  return IconContext !== void 0 ? /* @__PURE__ */ React$2.createElement(IconContext.Consumer, null, (conf) => elem(conf)) : elem(DefaultContext);
+}
+function FaWhatsapp(props) {
+  return GenIcon({ "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" }, "child": [] }] })(props);
+}
 function useInView(threshold = 0.15) {
   const ref = reactExports.useRef(null);
   const [visible, setVisible] = reactExports.useState(false);
@@ -18719,15 +18824,9 @@ function useInView(threshold = 0.15) {
   }, [threshold]);
   return { ref, visible };
 }
-const WA_LINK = "https://wa.me/919710065653?text=Hi%2C%20I%20am%20interested%20in%20Shree%20Tuition%20for%20Mathematics.%20Please%20share%20details.";
+const WA_LINK = "https://wa.me/919080583518?text=Hi%2C%20I%20am%20interested%20in%20Green%20Thumb%20Academy.%20Please%20share%20details.";
 function Navbar() {
-  const [scrolled, setScrolled] = reactExports.useState(false);
   const [open, setOpen] = reactExports.useState(false);
-  reactExports.useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
   const scrollTo = (id) => {
     var _a2;
     (_a2 = document.getElementById(id)) == null ? void 0 : _a2.scrollIntoView({ behavior: "smooth" });
@@ -18737,7 +18836,7 @@ function Navbar() {
     "nav",
     {
       "data-ocid": "navbar",
-      className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-subtle border-b border-border" : "bg-transparent"}`,
+      className: "fixed top-0 left-0 right-0 z-50 bg-white shadow-subtle border-b border-border",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -18748,33 +18847,10 @@ function Navbar() {
               onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }),
               className: "flex items-center gap-2 group",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "div",
-                  {
-                    className: `p-1.5 rounded-lg transition-smooth ${scrolled ? "bg-primary/10" : "bg-white/15"}`,
-                    children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      GraduationCap,
-                      {
-                        className: `w-5 h-5 ${scrolled ? "text-primary" : "text-white"}`
-                      }
-                    )
-                  }
-                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-1.5 rounded-lg transition-smooth bg-primary/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(GraduationCap, { className: "w-5 h-5 text-primary" }) }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "span",
-                    {
-                      className: `font-poppins font-700 text-sm sm:text-base font-bold tracking-tight ${scrolled ? "text-foreground" : "text-white"}`,
-                      children: "Shree Tuition"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "span",
-                    {
-                      className: `hidden sm:block text-xs ${scrolled ? "text-muted-foreground" : "text-white/70"}`,
-                      children: "Mathematics, Chennai"
-                    }
-                  )
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-poppins font-700 text-sm sm:text-base font-bold tracking-tight text-foreground", children: "GREEN THUMB ACADEMY" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "hidden sm:block text-xs text-muted-foreground", children: "Chennai" })
                 ] })
               ]
             }
@@ -18790,7 +18866,7 @@ function Navbar() {
               type: "button",
               "data-ocid": `navbar.${id}_link`,
               onClick: () => scrollTo(id),
-              className: `text-sm font-medium transition-smooth ${scrolled ? "text-foreground hover:text-primary" : "text-white/80 hover:text-white"}`,
+              className: "text-sm font-medium transition-smooth text-foreground hover:text-primary",
               children: label
             },
             id
@@ -18799,12 +18875,12 @@ function Navbar() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "a",
               {
-                href: "tel:+919710065653",
+                href: "tel:09080583518",
                 "data-ocid": "navbar.call_button",
-                className: `flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-smooth ${scrolled ? "text-primary border border-primary/30 hover:bg-primary/5" : "text-white/90 border border-white/30 hover:bg-white/10"}`,
+                className: "flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-smooth text-primary border border-primary/30 hover:bg-primary/5",
                 children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "w-3.5 h-3.5" }),
-                  "+91 97100 65653"
+                  "090805 83518"
                 ]
               }
             ),
@@ -18817,7 +18893,7 @@ function Navbar() {
                 "data-ocid": "navbar.whatsapp_button",
                 className: "flex items-center gap-1.5 bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-1.5 rounded-lg transition-smooth shadow-subtle",
                 children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-4 h-4" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-4 h-4" }),
                   "WhatsApp"
                 ]
               }
@@ -18829,7 +18905,7 @@ function Navbar() {
               type: "button",
               "data-ocid": "navbar.menu_toggle",
               onClick: () => setOpen(!open),
-              className: `md:hidden p-2 rounded-lg ${scrolled ? "text-foreground" : "text-white"}`,
+              className: "md:hidden p-2 rounded-lg text-foreground",
               "aria-label": open ? "Close menu" : "Open menu",
               children: open ? /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "w-5 h-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { className: "w-5 h-5" })
             }
@@ -18854,11 +18930,11 @@ function Navbar() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
             {
-              href: "tel:+919710065653",
+              href: "tel:09080583518",
               className: "flex items-center gap-2 text-sm font-medium text-primary py-2",
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "w-4 h-4" }),
-                "+91 97100 65653"
+                "090805 83518"
               ]
             }
           ),
@@ -18870,7 +18946,7 @@ function Navbar() {
               rel: "noopener noreferrer",
               className: "flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-4 h-4" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-4 h-4" }),
                 "Chat on WhatsApp"
               ]
             }
@@ -18886,14 +18962,14 @@ function Hero() {
     {
       id: "hero",
       "data-ocid": "hero.section",
-      className: "relative h-screen min-h-[600px] md:h-screen flex items-end pb-20 md:pb-28 overflow-hidden",
+      className: "relative h-screen min-h-[600px] md:h-screen flex items-end pt-24 pb-20 md:pb-28 overflow-hidden",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "img",
             {
               src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80",
-              alt: "Mathematics classroom",
+              alt: "Classroom",
               className: "w-full h-full object-cover",
               loading: "eager"
             }
@@ -18917,27 +18993,39 @@ function Hero() {
             "h1",
             {
               className: "text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins font-bold text-white leading-tight mb-4 max-w-4xl",
-              style: { animation: "fade-in-up 0.6s 0.1s ease-out both" },
               children: [
-                "Top-Rated Mathematics",
+                "Best Tuition Centre for",
                 /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-accent", children: "Tuition in Chennai" })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white", children: "Academic Excellence" })
               ]
             }
           ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "p",
             {
-              className: "text-white/80 text-lg sm:text-xl font-inter mb-8 max-w-xl",
-              style: { animation: "fade-in-up 0.6s 0.2s ease-out both" },
-              children: "Strong fundamentals. Better results. Confident students."
+              className: "text-white/80 text-lg sm:text-xl font-inter mb-6 max-w-xl",
+              children: [
+                "Strong fundamentals. Better results. Confident students.",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+                "Special focus on Phonics & Hindi learning."
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: "inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white font-inter text-sm px-4 py-2 rounded-full mb-8 shadow-elevated",
+              style: { animation: "fade-in-up 0.6s 0.25s ease-out both" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex items-center justify-center h-6 px-2.5 rounded-full bg-accent text-accent-foreground font-bold text-[10px] uppercase tracking-wider", children: "New" }),
+                "Accounts classes for 10th & 12th students now available."
+              ]
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "div",
             {
               className: "flex flex-col sm:flex-row gap-3",
-              style: { animation: "fade-in-up 0.6s 0.3s ease-out both" },
               children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "a",
@@ -18948,7 +19036,7 @@ function Hero() {
                     "data-ocid": "hero.whatsapp_button",
                     className: "flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold font-poppins text-base px-7 py-3.5 rounded-xl transition-smooth shadow-elevated",
                     children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-5 h-5" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-5 h-5" }),
                       "Chat on WhatsApp"
                     ]
                   }
@@ -18956,7 +19044,7 @@ function Hero() {
                 /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "a",
                   {
-                    href: "tel:+919710065653",
+                    href: "tel:09080583518",
                     "data-ocid": "hero.call_button",
                     className: "flex items-center justify-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 font-semibold font-poppins text-base px-7 py-3.5 rounded-xl transition-smooth",
                     children: [
@@ -18990,7 +19078,7 @@ function TrustStrip() {
       children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         "div",
         {
-          className: `glassmorphic bg-white/80 backdrop-blur-xl border border-white/60 shadow-elevated rounded-2xl px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`,
+          className: `bg-white/95 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgba(0,0,0,0.08)] rounded-3xl px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`,
           children: trustItems.map(({ icon: Icon2, label }, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "div",
             {
@@ -19028,7 +19116,7 @@ function SplitSection() {
                 "img",
                 {
                   src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900&q=80",
-                  alt: "Students studying mathematics",
+                  alt: "Students studying",
                   className: "w-full h-[420px] lg:h-[500px] object-cover"
                 }
               ),
@@ -19046,7 +19134,7 @@ function SplitSection() {
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-1 bg-accent rounded-full mb-6" }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-3xl sm:text-4xl font-poppins font-bold text-foreground mb-5 leading-tight", children: [
-                "Focused Mathematics",
+                "Focused",
                 /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-primary", children: "Coaching" })
               ] }),
@@ -19076,7 +19164,7 @@ function SplitSection() {
                   "data-ocid": "about.cta_button",
                   className: "inline-flex items-center gap-2 mt-8 gradient-primary text-white font-poppins font-semibold px-6 py-3 rounded-xl transition-smooth hover:opacity-90 shadow-elevated",
                   children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-4 h-4" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-4 h-4" }),
                     "Enquire Now"
                   ]
                 }
@@ -19091,19 +19179,103 @@ function SplitSection() {
 const programs = [
   {
     icon: Calculator,
-    title: "Mathematics Coaching",
-    desc: "From Class 6 to Class 12 — algebra, geometry, trigonometry, calculus. Board & competitive exam focus.",
-    tag: "Classes 6–12",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80",
-    imageAlt: "Student studying mathematics with equations on board"
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "All Subjects Tuition" }),
+    desc: "State Board, CBSE, and ICSE. From algebra to calculus, we ensure complete concept clarity.",
+    tag: "Tuition",
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=600&q=80",
+    imageAlt: "Tuition"
   },
   {
     icon: FlaskConical,
-    title: "Science Support",
-    desc: "Physics, chemistry, biology concept reinforcement. Understanding over memorization for lasting results.",
-    tag: "Classes 8–10",
-    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80",
-    imageAlt: "Science lab with students learning"
+    title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      "Hindi ",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase", children: "Popular" })
+    ] }),
+    desc: "Language program focusing on speaking, reading, and writing.",
+    tag: "Language",
+    image: "https://images.unsplash.com/photo-1657302155485-790b74d0b5d1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageAlt: "Hindi"
+  },
+  {
+    icon: Target,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      "Karate",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase", children: "Popular" })
+    ] }),
+    desc: "Physical fitness, self defense and discipline.",
+    tag: "Sports",
+    image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&q=80",
+    imageAlt: "Karate"
+  },
+  {
+    icon: FlaskConical,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      "Phonics ",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-accent text-accent-foreground uppercase", children: "Popular" })
+    ] }),
+    desc: "Reading, writing, and spelling foundations.",
+    tag: "Language",
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80",
+    imageAlt: "Phonics"
+  },
+  {
+    icon: Target,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "Abacus" }),
+    desc: "A proven method to enhance brain development, concentration, and mental arithmetic skills for young learners.",
+    tag: "Mental Arithmetic",
+    image: "https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?w=600&q=80",
+    imageAlt: "Abacus"
+  },
+  {
+    icon: Star,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "Vedic Maths" }),
+    desc: "Learn ancient techniques for ultra-fast calculations.",
+    tag: "Speed Maths",
+    image: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&q=80",
+    imageAlt: "Vedic Maths"
+  },
+  {
+    icon: Star,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "Yoga" }),
+    desc: "Physical and mental focus for a balanced lifestyle.",
+    tag: "Wellness",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+    imageAlt: "Yoga"
+  },
+  {
+    icon: Star,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "Drawing" }),
+    desc: "Creative expression and artistic foundations.",
+    tag: "Arts",
+    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
+    imageAlt: "Drawing"
+  },
+  {
+    icon: Star,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "Keyboard" }),
+    desc: "Musical foundation and keyboard playing skills.",
+    tag: "Music",
+    image: "https://images.unsplash.com/photo-1552422535-c45813c61732?w=600&q=80",
+    imageAlt: "Keyboard"
+  },
+  {
+    icon: Star,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: "Guitar" }),
+    desc: "Acoustic guitar lessons for all ages.",
+    tag: "Music",
+    image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=600&q=80",
+    imageAlt: "Guitar"
+  },
+  {
+    icon: BookOpen,
+    title: /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+      "Accounts (for 10th & 12th) ",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary text-white uppercase", children: "New" })
+    ] }),
+    desc: "Focused coaching for board exams and commerce fundamentals.",
+    tag: "Commerce",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
+    imageAlt: "Accounts"
   }
 ];
 function Programs() {
@@ -19126,7 +19298,7 @@ function Programs() {
             ]
           }
         ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto", children: programs.map((p, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto", children: programs.map((p, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
           {
             "data-ocid": `programs.item.${i + 1}`,
@@ -19164,7 +19336,7 @@ function Programs() {
               ] })
             ]
           },
-          p.title
+          i
         )) })
       ]
     }
@@ -19172,33 +19344,33 @@ function Programs() {
 }
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
-    alt: "Students learning",
+    src: "gallery/image3.jpeg",
+    alt: "Classroom teaching on digital board",
     span: "row-span-2"
   },
   {
-    src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80",
-    alt: "Classroom session",
+    src: "gallery/image4.jpeg",
+    alt: "Group of students studying together",
     span: ""
   },
   {
-    src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=700&q=80",
-    alt: "Group study",
-    span: ""
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80",
-    alt: "Focused student",
-    span: "row-span-2"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
-    alt: "Students at work",
+    src: "gallery/image5.jpeg",
+    alt: "Student doing mental arithmetic using an abacus",
     span: ""
   },
   {
     src: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=700&q=80",
-    alt: "Learning space",
+    alt: "Modern learning space",
+    span: "row-span-2"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80",
+    alt: "Focused student",
+    span: ""
+  },
+  {
+    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80",
+    alt: "Students at work",
     span: ""
   }
 ];
@@ -19326,19 +19498,19 @@ function Differentiators() {
 }
 const testimonials = [
   {
-    quote: "Good teaching and very dedicated to her work. My son's confidence in maths has improved significantly.",
-    reviewer: "Parent of Class 8 student",
-    initial: "R"
+    quote: "It is the best tuition because it has not only improved my studies but also built my confidence.",
+    reviewer: "Abhinav Kaimal",
+    initial: "A"
   },
   {
-    quote: "Strong in subject and uses modern teaching tools. My daughter scored 95 in her board exams this year.",
-    reviewer: "Parent of Class 10 student",
+    quote: "Your teaching style is not only effective but also incredibly nurturing, making learning enjoyable.",
+    reviewer: "subha shiny",
     initial: "S"
   },
   {
-    quote: "Highly recommend for discipline and improvement. The structured approach made a huge difference.",
-    reviewer: "Parent of Class 9 student",
-    initial: "M"
+    quote: "Best Teaching and Excellent yoga Class and other Classes Super 👌👍✨",
+    reviewer: "Rekha Magesh",
+    initial: "R"
   }
 ];
 function Testimonials() {
@@ -19434,7 +19606,7 @@ function CTABanner() {
                   "data-ocid": "cta.whatsapp_button",
                   className: "relative inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-poppins font-bold text-base px-8 py-4 rounded-xl shadow-elevated transition-smooth animate-pulse-subtle",
                   children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-5 h-5" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-5 h-5" }),
                     "Chat on WhatsApp Now"
                   ]
                 }
@@ -19480,11 +19652,11 @@ function Contact() {
                     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-muted-foreground font-inter mb-0.5", children: "Address" }),
                       /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-foreground font-inter text-sm leading-relaxed", children: [
-                        "PLOT NO 12, Natco Colony W St,",
+                        "5, Devaraj Nagar 2nd St,",
                         /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-                        "Swaminathan Nagar, Kottivakkam,",
+                        "Sai Balaji Nagar, Pallikaranai,",
                         /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-                        "Chennai, Tamil Nadu 600041"
+                        "Chennai, Tamil Nadu 600100"
                       ] })
                     ] })
                   ] }),
@@ -19495,10 +19667,10 @@ function Contact() {
                       /* @__PURE__ */ jsxRuntimeExports.jsx(
                         "a",
                         {
-                          href: "tel:+919710065653",
+                          href: "tel:09080583518",
                           "data-ocid": "contact.call_button",
                           className: "text-primary font-inter font-semibold text-sm hover:underline",
-                          children: "+91 97100 65653"
+                          children: "090805 83518"
                         }
                       )
                     ] })
@@ -19515,7 +19687,7 @@ function Contact() {
                   /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "a",
                     {
-                      href: "tel:+919710065653",
+                      href: "tel:09080583518",
                       "data-ocid": "contact.call_cta_button",
                       className: "flex items-center justify-center gap-2 border border-primary text-primary font-poppins font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-primary/5 transition-smooth",
                       children: [
@@ -19533,7 +19705,7 @@ function Contact() {
                       "data-ocid": "contact.whatsapp_button",
                       className: "flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-poppins font-semibold text-sm px-5 py-2.5 rounded-xl transition-smooth",
                       children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-4 h-4" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-4 h-4" }),
                         "Chat on WhatsApp"
                       ]
                     }
@@ -19548,8 +19720,8 @@ function Contact() {
                   children: /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "iframe",
                     {
-                      title: "Shree Tuition Location",
-                      src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8!2d80.2437!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKottivakkam%2C+Chennai!5e0!3m2!1sen!2sin!4v1234567890",
+                      title: "Green Thumb Academy Location",
+                      src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8!2d80.2437!3d12.9165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPallikaranai%2C+Chennai!5e0!3m2!1sen!2sin!4v1234567890",
                       width: "100%",
                       height: "100%",
                       style: { border: 0 },
@@ -19572,25 +19744,14 @@ function Footer() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { "data-ocid": "footer.section", className: "bg-primary py-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-2 mb-3", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(GraduationCap, { className: "w-5 h-5 text-white/70" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white font-poppins font-semibold text-base", children: "Shree Tuition for Mathematics" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-white font-poppins font-semibold text-base", children: "Green Thumb Academy" })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/60 font-inter text-xs mb-2", children: "PLOT NO 12, Natco Colony W St, Swaminathan Nagar, Kottivakkam, Chennai — 600041" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/60 font-inter text-xs mb-5", children: "+91 97100 65653" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/60 font-inter text-xs mb-2", children: "5, Devaraj Nagar 2nd St, Sai Balaji Nagar, Pallikaranai, Chennai, Tamil Nadu 600100" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/60 font-inter text-xs mb-5", children: "090805 83518" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-white/10 pt-5", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-white/40 font-inter text-xs", children: [
       "© ",
       year,
-      ". Built with love using",
-      " ",
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: `https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "hover:text-white/60 underline transition-smooth",
-          children: "caffeine.ai"
-        }
-      )
+      " Green Thumb Academy. All rights reserved."
     ] }) })
   ] }) });
 }
@@ -19607,7 +19768,7 @@ function FloatingWhatsApp() {
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-14 h-14", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 rounded-full bg-green-400 animate-ping opacity-30" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-xl transition-smooth group-hover:scale-110", children: /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "w-7 h-7 text-white" }) })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-xl transition-smooth group-hover:scale-110", children: /* @__PURE__ */ jsxRuntimeExports.jsx(FaWhatsapp, { className: "w-7 h-7 text-white" }) })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute right-16 top-1/2 -translate-y-1/2 bg-foreground text-background text-xs font-inter font-medium px-3 py-1.5 rounded-lg shadow-elevated opacity-0 group-hover:opacity-100 transition-smooth whitespace-nowrap pointer-events-none", children: "Chat on WhatsApp" })
       ]
