@@ -594,10 +594,7 @@ function Gallery() {
           </p>
         </div>
         {/* Masonry grid */}
-        <div
-          className={`columns-2 md:columns-3 gap-4 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-          style={{ transitionDelay: "150ms" }}
-        >
+        <div className="columns-2 md:columns-3 gap-4 min-h-[300px]">
           {galleryImages.map((img, i) => (
             <div
               key={img.src}
